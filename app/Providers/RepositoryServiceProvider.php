@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repositories\TodoRepository;
+use App\Repositories\TodoRepositoryInterface;
 use App\Repositories\UserRepository;
 use App\Repositories\UserRepositoryInterface;
 use Illuminate\Support\ServiceProvider;
@@ -15,6 +17,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public $bindings = [
         UserRepositoryInterface::class => UserRepository::class,
+        TodoRepositoryInterface::class => TodoRepository::class,
     ];
 
     /**
